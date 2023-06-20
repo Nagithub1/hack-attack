@@ -7,7 +7,222 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+}
+
+.log-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  opacity: 100%;
+  width: 400px;
+  height: 400px;
+  box-shadow: 15px 15px lime;
+  border: 5px solid lime;
+  z-index: 2;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input,
+label {
+  margin: 10px;
+}
+video{
+  width:100%;
+  height: 98vh;
+  object-fit: cover;
+  opacity: 45%;
+}
+
+h1 {
+  font-size: 50px;
+  margin-top: -20px;
+}
+
+.form-input {
+  text-align: center;
+  border-radius: 1rem;
+  width: 210px;
+  height: 25px;
+  border: 2px solid lime;
+}
+
+/* .herobtn
+{
+  border: 4px solid gold;
+  border-radius : 5rem; 
+  background-color: black;
+  color: lime;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 40px;
+} */
+
+
+#form-submit {
+  border-radius: 1rem;
+  height: 30px;
+  width: 70px;
+  border: 2px solid lime;
+  background-color: white;
+}
+
+label,
+h1,
+#form-submit,
+.form-input {
+  font-family: "Helvetica";
+  color: lime;
+}
+
+#form-submit,
+.form-input,
+.container,
+.log-form {
+  background-color: black;
+}
+
+.matrix-bg {
+  position: absolute;
+  z-index: 0;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  animation: bgmove 4s infinite;
+}
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 98vh;
+  background-color: rgb(4, 4, 4);
+}
+.herobg
+{
+  background-color:black;
+  height: 100vh;
+  width:100%;
+  align-items: center;
+  text-align: center;
+  color: rgb(10, 208, 10);
+}
+
+.herobg h1{
+  font-size: 70px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: 0 20px;
+  margin: 0 ;
+  padding: 40px;
+
+  
+
+}
+.herobg h4{
+  font-size: 40px;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  
+
+}
+.herobg h2{
+  font-size: 120px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+}
+
+
+@keyframes bgmove {
+  0% {
+    top: -500px;
+  }
+  100% {
+    top: 100px;
+  }
+}
+
+.heroBtnDiv{
+  padding-top: 40px;
+}
+
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
