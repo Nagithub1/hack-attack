@@ -1,5 +1,6 @@
 // import { useState } from "react";
 import { Routes,Route } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Hero from "./components/hero";
 import Login from "./components/login";
 import Dashboard from "./components/dashboard";
